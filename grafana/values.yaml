@@ -499,7 +499,7 @@ prometheus-stats:
       file:
     custom-dashboard:
       # This is a path to a file inside the dashboards directory inside the chart directory
-      file: dashboards/node-exporter-full.json
+      file: dashboards/custom-dashboard.json
 
 
 #dashboardProviders: {}
