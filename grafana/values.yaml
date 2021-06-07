@@ -496,9 +496,7 @@ dashboards:
       datasource: Prometheus
     local-dashboard:
       url: https://raw.githubusercontent.com/user/repository/master/dashboards/dashboard.json
-    custom-dashboard:
-      # This is a path to a file inside the dashboards directory inside the chart directory
-      file: dashboards/node-exporter-full.json
+
 
 
 #dashboardProviders: {}
