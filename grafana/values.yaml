@@ -520,6 +520,8 @@ dashboards:
       gnetId: 10000
       revision: 1
       datasource: Prometheus
+    custom-dashboard:
+      file: dashboards/node-exporter-full.json
 
 
 
