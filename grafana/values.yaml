@@ -319,14 +319,14 @@ initChownData:
 
 
 # Administrator credentials when not using an existing secret (see below)
-adminUser: admin
-# adminPassword: strongpassword
+adminUser: pomelo
+adminPassword: pomelo
 
 # Use an existing secret for the admin user.
-admin:
-  existingSecret: ""
-  userKey: admin-user
-  passwordKey: admin-password
+#admin:
+  #existingSecret: ""
+  #userKey: admin-user
+  #passwordKey: admin-password
 
 ## Define command to be executed at startup by grafana container
 ## Needed if using `vault-env` to manage secrets (ref: https://banzaicloud.com/blog/inject-secrets-into-pods-vault/)
@@ -436,7 +436,16 @@ plugins: []
 ## Configure grafana datasources
 ## ref: http://docs.grafana.org/administration/provisioning/#datasources
 ##
-datasources: {}
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+      - name: Prometheus
+        type: prometheus
+        url: http://host.docker.internal:9090
+        access: proxy
+        isDefault: true
+#datasources: {}
 #  datasources.yaml:
 #    apiVersion: 1
 #    datasources:
@@ -477,7 +486,35 @@ notifiers: {}
 ##
 ## `path` must be /var/lib/grafana/dashboards/<provider_name>
 ##
-dashboardProviders: {}
+dashboards:
+  default:
+    some-dashboard:
+      json: |
+        {
+          "annotations":
+
+          ...
+          # Complete json file here
+          ...
+
+          "title": "Some Dashboard",
+          "uid": "abcd1234",
+          "version": 1
+        }
+    node-exporter:
+      # This is a path to a file inside the dashboards directory inside the chart directory
+      file: dashboards/node-exporter.json
+    prometheus-stats:
+      # Ref: https://grafana.com/dashboards/2
+      gnetId: 2
+      revision: 2
+      datasource: Prometheus
+    local-dashboard:
+      url: https://raw.githubusercontent.com/user/repository/master/dashboards/dashboard.json
+
+
+
+#dashboardProviders: {}
 #  dashboardproviders.yaml:
 #    apiVersion: 1
 #    providers:
@@ -496,7 +533,7 @@ dashboardProviders: {}
 ##
 ## dashboards per provider, use provider name as key.
 ##
-dashboards: {}
+#dashboards: {}
   # default:
   #   some-dashboard:
   #     json: |
