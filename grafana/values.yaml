@@ -489,18 +489,26 @@ notifiers: {}
 
 dashboards:
   default:
+    default:
+      some-dashboard:
+        json: |
+          {
+            "annotations":
+
+            ...
+            # Complete json file here
+            ...
+
+            "title": "Some Dashboard",
+            "uid": "abcd1234",
+            "version": 1
+          }
 
 prometheus-stats:
       # Ref: https://grafana.com/dashboards/2
       gnetId: 2
       revision: 2
       datasource: Prometheus
-    local-dashboard:
-      file:
-    custom-dashboard:
-      # This is a path to a file inside the dashboards directory inside the chart directory
-      file: dashboards/custom-dashboard.json
-
 
 #dashboardProviders: {}
 #  dashboardproviders.yaml:
