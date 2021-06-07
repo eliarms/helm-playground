@@ -521,7 +521,7 @@ dashboards:
       revision: 1
       datasource: Prometheus
     custom:
-      file: dashboards/node-exporter-full.json
+      file: dashboards/node.json
 
 
 
