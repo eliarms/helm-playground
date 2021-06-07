@@ -522,7 +522,9 @@ dashboards:
       revision: 1
       datasource: Prometheus
     node-exporter:
-      file: dashboards/node.json
+      file: dashboards/node-exporter.json
+    redis-dashboard:
+      file: dashboards/redis-dashboard.json
 
 
 
