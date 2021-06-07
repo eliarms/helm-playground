@@ -518,13 +518,15 @@ dashboards:
   #   b64content: true
   default:
     prometheus-stats:
-      gnetId: 10000
+      gnetId: 2
       revision: 1
       datasource: Prometheus
     node-exporter:
       file: dashboards/node-exporter.json
     redis-dashboard:
       file: dashboards/redis-dashboard.json
+    mysql-dashboard:
+      file: dashboards/mysql-dashboard.json
 
 
 

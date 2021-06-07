@@ -1217,7 +1217,7 @@
     ]
   },
   "timezone": "",
-  "title": "NGINX / API / Dashboard",
+  "title": "Pomelo NGINX / API / Dashboard",
   "uid": "EORYoenZz",
   "version": 13,
   "description": "Nginx,OpenResty HTTP API performance monitoring based on Prometheus LUA library"
