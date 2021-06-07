@@ -489,19 +489,6 @@ notifiers: {}
 
 dashboards:
   default:
-    some-dashboard:
-      json: |
-        {
-          "annotations":
-
-          ...
-          # Complete json file here
-          ...
-
-          "title": "Some Dashboard",
-          "uid": "abcd1234",
-          "version": 1
-        }
     custom-dashboard:
       # This is a path to a file inside the dashboards directory inside the chart directory
       file: dashboards/node-exporter-full.json
