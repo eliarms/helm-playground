@@ -527,6 +527,8 @@ dashboards:
       file: dashboards/redis-dashboard.json
     mysql-dashboard:
       file: dashboards/mysql-dashboard.json
+    nginx-dashboard:
+      file: dashboards/api-dashboard.json
 
 
 
