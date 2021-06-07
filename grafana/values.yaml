@@ -490,14 +490,14 @@ dashboardProviders:
   dashboardproviders.yaml:
     apiVersion: 1
     providers:
-      - name: 'custom'
+      - name: 'default'
         orgId: 1
         folder: ''
         type: file
         disableDeletion: false
         editable: true
         options:
-          path: /var/lib/grafana/dashboards/custom
+          path: /var/lib/grafana/dashboards/default
 
 
 dashboards:
@@ -516,8 +516,12 @@ dashboards:
   #   local-dashboard-base64:
   #     url: https://example.com/repository/test-b64.json
   #   b64content: true
-  custom:
-    node:
+  default:
+    prometheus-stats:
+      gnetId: 10000
+      revision: 1
+      datasource: Prometheus
+    node-exporter:
       file: dashboards/node.json
 
 
