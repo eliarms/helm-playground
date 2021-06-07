@@ -499,6 +499,7 @@ dashboardProviders:
         options:
           path: /var/lib/grafana/dashboards/default
 
+
 dashboards:
   # default:
   #   some-dashboard:
@@ -516,10 +517,6 @@ dashboards:
   #     url: https://example.com/repository/test-b64.json
   #   b64content: true
   default:
-    prometheus-stats:
-      gnetId: 10000
-      revision: 1
-      datasource: Prometheus
     custom:
       file: dashboards/node.json
 
