@@ -305,3 +305,10 @@ podDisruptionBudget:
 
 ## Assign a PriorityClassName to pods if set
 priorityClassName: ""
+
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com:eliarms/helm-playground.git
+    targetRevision: HEAD

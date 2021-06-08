@@ -1,0 +1,12 @@
+apiVersion: v2
+name: Pomelo GCP apps
+version: 6.11.0
+appVersion: 1.0
+kubeVersion: '^1.8.0-0'
+description: POMELO APPS
+home: https://www.pomelohealth.ca/
+icon: https://assets.website-files.com/6047bdc6ac4a6aabaafc6c6e/6047bdc6ac4a6a57d5fc6ca4_Pomelo.svg
+sources:
+  - https://github.com/chronometriq/infrops-terraform-gcp-management
+engine: gotpl
+type: application
