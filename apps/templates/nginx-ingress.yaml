@@ -68,7 +68,7 @@ spec:
               udp: {}
 
     repoURL: https://kubernetes.github.io/ingress-nginx
-    targetRevision: 3.30.0
+    targetRevision: 0.47.0
   syncPolicy:
     automated:
       prune: true
