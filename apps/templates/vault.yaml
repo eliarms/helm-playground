@@ -12,7 +12,15 @@ spec:
   project: default
   source:
     chart: banzaicloud-stable/vault
-    path: projects/vault
+    helm:
+      values: |
+        ingress:
+          enabled: true
+          hosts:
+            - vault.management-b.pomelo.health
+          annotations:
+             kubernetes.io/ingress.class: nginx
+
     repoURL: http://kubernetes-charts.banzaicloud.com/branch/master
     targetRevision: 1.13.0
   syncPolicy:

@@ -13,9 +13,8 @@ spec:
   source:
     chart: prometheus
     helm:
-      values: |
-        pushgateway:
-          enabled: false
+      valueFiles:
+        - projects/vault
     repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: 13.0.2
   syncPolicy:
