@@ -13,7 +13,8 @@ spec:
   source:
     chart: banzaicloud-stable/vault
     path: projects/vault
-    repoURL: https://kubernetes-charts.banzaicloud.com
+    repoURL: http://kubernetes-charts.banzaicloud.com/branch/master
+    targetRevision: 1.13.0
   syncPolicy:
     automated:
       prune: true
