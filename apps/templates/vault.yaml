@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: vault
+  name: prometheus
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
+    server: https://kubernetes.default.svc
     namespace: default
-    server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: apps/vault
-    repoURL: {{ .Values.spec.source.repoURL }}
-    targetRevision: {{ .Values.spec.source.targetRevision }}
-
+    chart: banzaicloud-stable/vault
+    path: projects/vault
+    repoURL: https://kubernetes-charts.banzaicloud.com
+    targetRevision: 1.13.0
   syncPolicy:
     automated:
       prune: true
