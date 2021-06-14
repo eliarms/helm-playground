@@ -1,8 +1,0 @@
-apiVersion: v1
-description: A Helm chart example for Emmanuel Eliason-Armstrong Course
-name: helm_example
-version: 0.1.0
-maintainers:
-  - name:  Emmanuel Eliason-Armstrong
-    email: geteliarms@gmail.com
-    url: www.eliarms.com
