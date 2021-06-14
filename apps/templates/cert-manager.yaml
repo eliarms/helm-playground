@@ -10,7 +10,8 @@ spec:
     server: {{ .Values.spec.destination.server }}
     namespace: default
   project: default
-  source:
+  source: https://github.com/jetstack/cert-manager
+    path: deploy/charts/cert-manager
     chart: jetstack/cert-manager
     helm:
       values: |
